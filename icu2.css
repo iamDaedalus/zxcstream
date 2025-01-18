@@ -40,7 +40,7 @@ a {
   overflow: hidden;
   cursor: grab;
 }
-.backdropSwiper:active{
+.backdropSwiper:active {
   cursor: grabbing;
 }
 
@@ -56,18 +56,23 @@ a {
 
 .posterContainer {
   position: absolute;
-  bottom: 25px;
+  top: 20%;
   height: 240px;
-  width: 180px;
+
+  width: 100%;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  pointer-events: none;
+  /* pointer-events: none; */
+  display: none;
+}
+.posterContainerHide {
   display: none;
 }
 .posterSwiper {
   border-radius: 12px;
   overflow: hidden;
+  width: 180px;
 }
 .infoContainer {
   position: absolute;
@@ -276,15 +281,20 @@ header svg {
   z-index: 1;
 }
 
+/* .swiperContainer {
+  height: 300px;
+} */
+
 .companySlide {
   position: relative;
-  height: 300px;
-  width: 210px;
+  width: 13%;
+  min-width: 160px;
   cursor: pointer;
   transition: transform 0.2s ease-out;
   color: #e8e8e8;
   font-weight: 300;
 }
+
 .companySlide:hover {
   transform: scale(1.08);
 }
