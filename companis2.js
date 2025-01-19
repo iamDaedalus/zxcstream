@@ -171,7 +171,6 @@ play_arrow
     new Swiper(swiperContainer, {
       slidesPerView: "auto",
       spaceBetween: 15,
-      slidesPerGroup: 3,
       // grid: {
       //   rows: 2, // Number of rows
       //   fill: "row", // Direction to fill slides ('row' or 'column')
