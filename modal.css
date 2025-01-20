@@ -1,0 +1,192 @@
+.modal {
+  height: 100%;
+  width: 100%;
+  background: #0d0d0d;
+  position: fixed;
+  z-index: 888;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease-out;
+  color: #e8e8e8;
+}
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.arrow_back {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 15px;
+  background: #e8e8e886;
+  border-radius: 0 8px 0 10px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 9;
+}
+.arrow_back::after {
+  content: "BACK";
+  font-size: 0.7rem;
+}
+.modalWrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 50px;
+}
+
+.modalPoster {
+  position: relative;
+  height: 100%;
+  width: 30%;
+  border-radius: 8px;
+  /* border: 1px solid #e8e8e88d; */
+}
+#modalPoster {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+.modalPlay {
+  position: absolute;
+  right: -40px;
+  bottom: 40%;
+  font-size: 5rem;
+  background: red;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+.modalPlay:hover {
+  transform: scale(1.1);
+}
+#modalTitle {
+  padding: 2px 55px 2px 10px;
+  font-size: clamp(2rem, 1.9616rem + 1.9178vw, 3.4rem);
+  font-family: "Bespoke Stencil";
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+.modalContent {
+  height: 100%;
+  min-width: 600px;
+  width: calc(100% - 30%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modalContentUpper {
+  min-height: 150px;
+  /* border: 1px solid #e8e8e88d; */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modalContentLower {
+  height: calc(100% - 150px);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.modalButtons {
+  display: flex;
+  gap: 15px;
+}
+.modalButtons button {
+  width: 100%;
+  font-size: clamp(0.9rem, 0.8918rem + 0.411vw, 1.2rem);
+  font-weight: 600;
+  background: transparent;
+  border: 0;
+  color: #e8e8e89d;
+  padding: 15px 0;
+  cursor: pointer;
+}
+.activeButton {
+  border-bottom: 3px solid red !important;
+}
+.modalTrio {
+  display: flex;
+  font-size: clamp(0.9rem, 0.8863rem + 0.6849vw, 1.4rem);
+  gap: 20px;
+  padding: 2px 10px;
+}
+#modalOverview {
+  font-size: clamp(1rem, 0.9945rem + 0.274vw, 1.2rem);
+  height: 100%;
+  width: 100%;
+  padding: 25px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  overflow: hidden;
+}
+.modalTrailer {
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .modalPoster {
+    display: none;
+  }
+  .modalContent {
+    height: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .castimageContainer {
+    height: 150px;
+    width: 150px;
+  }
+  #castContainer {
+    display: flex;
+    padding: 0 0 47px 0;
+  }
+  .seasonSlide {
+    width: 150px;
+  }
+  .episodeSlide {
+    height: 148px;
+    gap: 20px;
+  }
+  .episodeNameContainer {
+    gap: 5px;
+  }
+  .arrow_back {
+    font-size: clamp(1rem, 0.9726rem + 1.3699vw, 2rem);
+    padding: 10px 12px;
+    gap: 4px;
+  }
+  .arrow_back::after {
+    content: "BACK";
+    font-size: clamp(0.5rem, 0.4945rem + 0.274vw, 0.7rem);
+  }
+  .modalWrapperImage {
+    display: block;
+  }
+  .modalWrapper::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(0deg, black, rgba(0, 0, 0, 0.268));
+  }
+}
