@@ -1,0 +1,148 @@
+@media only screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 3px;
+    width: calc(100% - 6px);
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .movie-tooltip {
+    display: none;
+  }
+  .infoContainer {
+    left: unset;
+    bottom: 19%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .infoContainer p,
+  .infoContainer i {
+    font-size: 1rem;
+  }
+
+  .backdropSwiper::before {
+    background: linear-gradient(0deg, #000000 15%, #0d0d0d36);
+  }
+  .posterContainer {
+    display: flex;
+  }
+
+  .logoImage,
+  .landingTitle,
+  .landingOverview {
+    display: none;
+  }
+  .landingTagline {
+    text-align: center;
+    padding: 10px;
+  }
+  .backdropSwiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landingTrailer {
+    left: unset;
+    height: 100%;
+  }
+  .visibilityButton {
+    display: flex;
+  }
+  .networkSection {
+    height: 70dvh;
+  }
+
+  .backdropImg {
+    border-radius: 5px;
+  }
+  .swiperContainer {
+    width: 95%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 10px 0 60px 0;
+  }
+  .companyTitle {
+    font-size: 2rem;
+  }
+
+  label {
+    aspect-ratio: 16 / 4;
+    -webkit-text-stroke: 0.5px rgba(245, 245, 245, 0.727);
+  }
+  .meow-movie {
+    padding: 120px 10px 10px 10px;
+    gap: 10px;
+  }
+  .blank {
+    height: 90dvh;
+ 
+  }
+  nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10dvh;
+    border-radius: 0;
+    background: #0d0d0d;
+    border: 0;
+  }
+  .van {
+    flex-direction: column;
+  }
+  .vanmob {
+    display: flex;
+  }
+  .searchBarContainer {
+    position: fixed;
+    top: 60px;
+    width: 95%;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s ease-out;
+    transform: translateY(-100%);
+  }
+  .searchBarContainer.show {
+    pointer-events: all;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  .searchIcon {
+    display: none;
+  }
+  .searchBar {
+    width: 100%;
+    border-bottom: 1px solid whitesmoke;
+    border-radius: 0;
+    color: #e8e8e8;
+    background: transparent;
+  }
+  .searchBar.active {
+    width: 100%;
+  }
+  .modalPlay {
+  position: relative;
+  right: unset;
+  bottom: unset;
+  font-size: 2rem;
+  border-radius: 5px;
+  text-align: center;
+  width: 20%;
+}
+
+.arrowUp span {
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-top: -25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.arrowUp span:nth-child(2)::after {
+
+  font-size: 0.6rem;
+
+}
+}
+
